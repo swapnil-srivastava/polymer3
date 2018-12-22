@@ -20,7 +20,6 @@ jobs:
       - checkout
       - setup_remote_docker
 
-      - run: npm i -g polymer-cli
 
       # Download and cache dependencies
       - restore_cache:
@@ -29,7 +28,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: polymer install
+      - run: yarn install
 
       - save_cache:
           paths:
@@ -38,7 +37,7 @@ jobs:
 
 
       # already ng build is being executed in docker file to create dist folder
-      - run: polymer build 
+      - run: yarn polymer build 
 
       # deploying to firebase using the command below
       - run: yarn firebase deploy --token=$FIREBASE_TOKEN --non-interactive
