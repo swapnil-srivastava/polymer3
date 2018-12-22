@@ -12,7 +12,7 @@ class PolymerApp3App extends PolymerElement {
           display: block;
         }
       </style>
-      <h2>Hello [[prop1]]!</h2>
+      <h2>Hello POLYMER [[prop1]]!</h2>
     `;
   }
   static get properties() {
