@@ -1,0 +1,7 @@
+{
+  "name": "polymer-app-3",
+  "short_name": "polymer-app-3",
+  "description": "This is a starter project for polymer 3 app",
+  "start_url": "/",
+  "display": "standalone"
+}
